@@ -1,4 +1,10 @@
-%% Open Minilog
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Data folder and subfolders must be added to path before running
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+clc; clear; close all;
+
+%% Read data
 
 Minilog5m = readtable('Minilog-II-T_355571_20250405_1.csv','NumHeaderLines',8);
 Minilog15m = readtable('Minilog-II-T_355583_20250405_1.csv','NumHeaderLines',8);
@@ -6,18 +12,13 @@ Minilog25m = readtable('Minilog-II-T_355572_20250405_1.csv','NumHeaderLines',8);
 Minilog35m = readtable('Minilog-II-T_355573_20250405_1.csv','NumHeaderLines',8);
 Minilog45m = readtable('Minilog-II-T_358946_20250405_1.csv','NumHeaderLines',8);
 
-%% Open Seabird 37
-
 Seabird1m = readtable('SBE37SMP-RS232_03720169_2025_04_05.csv');
 Seabird20m = readtable('SBE37SMP-RS232_03727333_2025_04_05.csv');
 Seabird30m = readtable('SBE37SM-RS232_03710965_2025_04_05.csv');
 
-%% Open Seaguard 
-
 Seaguard10m = readtable('1711.txt');
 Seaguard40m = readtable('1705.txt');
 
-%% Open ADCP
 ADCP = readtable('adcp.txt');
 
 %% Plot Current -  Seaguard
